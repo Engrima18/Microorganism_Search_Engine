@@ -1,17 +1,27 @@
 ---
 version: '3.4'
 services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    volumes:
+      - ./app:/app
+    depends_on:
+      - weaviate
   weaviate:
     command:
-    - --host
-    - 0.0.0.0
-    - --port
-    - '8080'
-    - --scheme
-    - http
+      - --host
+      - 0.0.0.0
+      - --port
+      - '8080'
+      - --scheme
+      - http
     image: semitechnologies/weaviate:1.19.8
     ports:
-    - 8080:8080
+      - 8080:8080
     restart: on-failure:0
     environment:
       IMAGE_INFERENCE_API: 'http://i2v-neural:8080'
@@ -23,8 +33,9 @@ services:
       CLUSTER_HOSTNAME: 'node1'
       BACKUP_FILESYSTEM_PATH: '/tmp/backups'
     volumes:
-    - /var/weaviate:/var/lib/weaviat
+    - /var/weaviate:/var/lib/weaviate
     - backups-weaviate:/tmp/backups
+
   i2v-neural:
     image: semitechnologies/img2vec-pytorch:resnet50
     environment:
