@@ -1,15 +1,16 @@
 <template>
   <div id="root" :class="queried? 'panelshow' : 'covershow'">
     <div id="cover">
+        <img v-if="!query" src="./assets/log.png" class="logo">
         <h1>Microorganisms Search Engine</h1>
         <SearchBar v-if="!queried" v-model="query"/>
         <img v-else :src="query" alt="uploaded image">
         <button v-if="query && !queried" role="button" @click="similarityRequest">Search</button>
-        <button v-if="query && queried" role="button" @click="newSearch">X</button>
+        <button v-if="query && queried" role="button" @click="newSearch">New Search</button>
     </div>
 
     <div v-if="queried" id="panels">
-      <GalleryCard :images="results"/>
+      <GalleryCard :results="results"/>
     </div>
 
   </div>
@@ -21,15 +22,23 @@ import { ref } from 'vue';
 import SearchBar from './components/SearchBar.vue';
 import ImageCard from './components/ImageCard.vue';
 import GalleryCard from './components/GalleryCard.vue';
+import { Result } from './funcs/types';
 const query = ref<string | undefined>(undefined)
 const queried = ref<boolean>(false)
-const results = ref<string[]>([])
+const results = ref<Result[]>([])
 
 function similarityRequest(e : Event) {
     console.log(query)
     queried.value=true
+
+    let res : Result = {
+      img : query.value,
+      name : 'bob',
+      attributes : {'bello': 10, 'specie': 'tua mamma'},
+      score: 0.7
+    }
     for (let i=0; i<20; i++) {
-      results.value.push(query.value)
+      results.value.push(res)
     }
 }
 
@@ -80,6 +89,13 @@ function newSearch(e: Event) {
   height: 94vh;
   flex-direction: column;
 }
+#root.covershow > #cover h1 {
+  flex-grow: 0;
+}
+h1 {
+  margin:0;
+  flex-grow: 100;
+}
 
 #root.panelshow > #cover {
   height: 10vh;
@@ -92,9 +108,7 @@ function newSearch(e: Event) {
   gap: 1em;
 
 }
-#root.panelshow  h1 {
-  align-self:flex-start;
-}
+
 
 #cover {
   transition: all 0.3s ease;
@@ -138,8 +152,10 @@ button , input[type=file]::file-selector-button{
 button:hover, input[type=file]::file-selector-button:hover {
   background: #1aa50d;
 }
-h1 {
-  margin:0;
-  flex-grow: 100;
+
+#cover>.logo {
+  max-height: 5em;
+  max-width: 5em;
+  aspect-ratio: 1/1;
 }
 </style>
