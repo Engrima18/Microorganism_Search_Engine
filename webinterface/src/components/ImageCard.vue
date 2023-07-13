@@ -21,6 +21,10 @@ const emit = defineEmits(['click'])
 </script>
 
 <style scoped>
+.ImageCard {
+    height: fit-content;
+    width: fit-content;
+}
 img {
     max-height: inherit;
   object-fit: cover;

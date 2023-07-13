@@ -48,6 +48,10 @@ function newSearch(e: Event) {
   overflow: hidden;
 }
 
+#root.panelshow {
+  margin-top: 16vh;
+}
+
 #root.covershow > #panels {
   display: none;
 }
@@ -60,6 +64,8 @@ function newSearch(e: Event) {
   height: inherit;
   padding-left: 3vw;
   padding-top: 3vh;
+  padding-right: 3vw;
+  padding-bottom: 3vh;
 }
 
 #cover>img {
@@ -73,12 +79,21 @@ function newSearch(e: Event) {
 #root.covershow > #cover {
   height: 94vh;
   flex-direction: column;
-  
 }
 
 #root.panelshow > #cover {
   height: 10vh;
   flex-direction: row;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  background: white;
+  z-index: 2;
+  gap: 1em;
+
+}
+#root.panelshow  h1 {
+  align-self:flex-start;
 }
 
 #cover {
@@ -125,5 +140,6 @@ button:hover, input[type=file]::file-selector-button:hover {
 }
 h1 {
   margin:0;
+  flex-grow: 100;
 }
 </style>
