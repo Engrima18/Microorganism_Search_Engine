@@ -1,7 +1,7 @@
 <template>
 
 <label for="images" class="drop-container" id="dropcontainer">
-    <div v-if="image" id="preview">
+    <div v-if="props.modelValue" id="preview">
         <img :src="image" alt="uploaded image"/>
     </div>
     <div v-else>
@@ -19,22 +19,27 @@
         >
 </label>
 
-<button v-if="image" role="button" @click="sendPhoto">Search</button>
 
 </template>
 
 <script setup lang="ts">
-import { ref} from "vue";
-const image = ref()
+import { defineProps, defineEmits, ref } from "vue";
+const props = defineProps({
+  modelValue : String
+})
 
+const emit = defineEmits(['update:modelValue'])
+
+const image = ref<string>()
 function showFilePreview(e : Event){
-    let files = e.target.files || e.dataTransfer.files;
+    let files = e.target?.files || e.dataTransfer.files;
     if (!files.length) return;
     image.value = URL.createObjectURL(files[0]);
+    emit('update:modelValue', image.value)
 }
 
 function sendPhoto(e : Event) {
-    
+    console.log(e)
 }
 
 </script>

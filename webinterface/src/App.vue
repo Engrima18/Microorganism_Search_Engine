@@ -1,18 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <SearchBar/>
+  <div id="root">
+    <SearchBar v-model="image"/>
+    <button v-if="image" role="button" @click="sendPhoto">Search</button>
+
+  </div>
+
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script setup lang="ts">
+import { ref } from 'vue';
 import SearchBar from './components/SearchBar.vue';
+const image = ref<string | undefined>(undefined)
 
-export default defineComponent({
-  name: 'App',
-  components: {
-    SearchBar
-  }
-});
 </script>
 
 <style>
