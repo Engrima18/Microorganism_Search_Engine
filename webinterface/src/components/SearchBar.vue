@@ -25,7 +25,7 @@
 <script setup lang="ts">
 import { defineProps, defineEmits, ref } from "vue";
 const props = defineProps({
-  modelValue : String
+  modelValue : File
 })
 
 const emit = defineEmits(['update:modelValue'])
@@ -35,7 +35,7 @@ function showFilePreview(e : Event){
     let files = e.target?.files || e.dataTransfer.files;
     if (!files.length) return;
     image.value = URL.createObjectURL(files[0]);
-    emit('update:modelValue', image.value)
+    emit('update:modelValue', files[0])
 }
 </script>
 

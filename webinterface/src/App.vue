@@ -4,10 +4,12 @@
         <img v-if="!query" src="./assets/log.png" class="logo">
         <h1>Microorganisms Search Engine</h1>
         <SearchBar v-if="!queried" v-model="query"/>
-        <img v-else :src="query" alt="uploaded image">
+        <img v-else :src="(query) => to_URL(query)" alt="uploaded image">
         <button v-if="query && !queried" role="button" @click="similarityRequest">Search</button>
         <button v-if="query && queried" role="button" @click="newSearch">New Search</button>
     </div>
+
+    <p>{{ comp_response }}</p>
 
     <div v-if="queried" id="panels">
       <GalleryCard :results="results"/>
@@ -20,26 +22,73 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import SearchBar from './components/SearchBar.vue';
-import ImageCard from './components/ImageCard.vue';
 import GalleryCard from './components/GalleryCard.vue';
 import { Result } from './funcs/types';
-const query = ref<string | undefined>(undefined)
+import { convertBase64 } from './funcs/base64'
+const query = ref<File>()
 const queried = ref<boolean>(false)
 const results = ref<Result[]>([])
 
-function similarityRequest(e : Event) {
-    console.log(query)
+const comp_response = ref()
+
+async function similarityRequest(e : Event) {
     queried.value=true
 
-    let res : Result = {
-      img : query.value,
-      name : 'bob',
-      attributes : {'bello': 10, 'specie': 'tua mamma'},
-      score: 0.7
-    }
-    for (let i=0; i<20; i++) {
-      results.value.push(res)
-    }
+    console.log('sent')
+    let img_base64 :string = await convertBase64(query.value!)
+    console.log(img_base64)
+
+    let response = await fetch('https://0ky1r083ji.execute-api.us-east-1.amazonaws.com/default/black_and_white', {
+      method: "POST",
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      // make sure to serialize your JSON body
+      body: JSON.stringify({
+        image: img_base64
+      })
+    })
+
+    console.log(response)
+    comp_response.value = response
+
+    // let res : Result = {
+    //   img : query.value,
+    //   name : 'bob',
+    //   attributes : {'bello': 10, 'specie': 'tua mamma'},
+    //   score: 0.7
+    // }
+    // for (let i=0; i<20; i++) {
+    //   results.value.push(res)
+    // }
+
+//     import cv2
+// import json
+
+// def lambda_handler(event, context):
+//     try:
+//         image = event['body']['image']
+//     except:
+//         print('ABORT no parameter image ')
+//         return {
+//             'statusCode': 200,
+//             'body': 'ABORTED, no image' 
+//         }
+    
+//     img = cv2.imread(image)
+        
+//     print(event)
+//     return {
+//         'statusCode': 200,
+//         'body': json.dumps('yooo')
+//     }
+    
+
+}
+
+function to_URL(file : File) : string {
+  return URL.createObjectURL(file)
 }
 
 function newSearch(e: Event) {
