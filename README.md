@@ -9,6 +9,7 @@ The goal of this project is to develop an application that provides a search eng
 images will be done using Weaviate.
 
 <br/>
+<br/>
 
 ## Weaviate and the pre-trained NN
 
