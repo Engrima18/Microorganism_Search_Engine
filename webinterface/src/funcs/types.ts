@@ -1,6 +1,7 @@
 export type Result = {
-    img: string;
-    name: string;
+    image: string;
+    species: string;
     attributes: object | undefined;
-    score: number | undefined;
+    '_additional' : object | undefined;
+    certainity: number | undefined;
 }
