@@ -35,4 +35,27 @@ task, however we identified three main components of our application:
 >- An API call for querying the database;
 >- The vector database itself.
 
+## Scaling with AWS
+The implementative solution involves the use of an EC2 instance on which to directly upload
+the already containerized application. In this first, fairly trivial example, a call to
+lambda function via a specific event on the web page (in an S3 bucket) is then always
+expected, and the lambda code will then provide for using the EC2 computational
+resource to launch the two docker images. Finally, the computed output will be
+returned dynamically and asynchronously (with respect to the request from the client).
+The following steps then power to good scalability performance:
+1. Set up an Auto Scaling group: we create an Auto Scaling group using our Launch
+Configuration. We specify the desired capacity, minimum and maximum number
+of instances, and scaling policy. The Auto Scaling group will automatically
+launch and terminate instances based on the defined criteria.
+2. Configure a load balancer: we set up an Elastic Load Balancer (ELB), in particular
+an Application Load Balancer (ALB) to distribute incoming traffic across our
+EC2 instances. We configure the load balancer to listen on the appropriate ports
+and protocols for our web app, i.e. port 80 for the HTTP protocol.
+3. Add instances to the load balancer: we associate the instances launched by the
+Auto Scaling group with our load balancer. This ensures that traffic is evenly
+distributed among the instances (fairness performance).
+4. Monitor and adjust scaling: finally we can monitor the performance of our web
+app and adjust the scaling policies as needed.
+
+<img src="https://github.com/Engrima18/FlashLearnChain/assets/93355495/755cd041-6290-46b2-9413-80c6d2479c6b">
 
