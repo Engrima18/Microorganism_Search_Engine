@@ -34,4 +34,4 @@ task, however we identified three main components of our application:
 >- An API call for querying the database;
 >- The vector database itself.
 
-<img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/39c0c571-c750-4e3e-a93e-3172a2447215" >
+<img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/39c0c571-c750-4e3e-a93e-3172a2447215" width=20% height=25% align="right">
