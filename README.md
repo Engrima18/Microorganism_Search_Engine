@@ -25,6 +25,7 @@ vector is then placed into an index, allowing the database to quickly perform se
 by finding the most similar vectors in the database to a given query vector.
 
 ## Microservices architecture
+<img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/39c0c571-c750-4e3e-a93e-3172a2447215" width=30% height=35% align="right">
 
 In order to allow the scaling of our application we would like to implement it through
 a set of microservices such that the single functions can be scaled individually. But
@@ -34,4 +35,4 @@ task, however we identified three main components of our application:
 >- An API call for querying the database;
 >- The vector database itself.
 
-<img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/39c0c571-c750-4e3e-a93e-3172a2447215" width=20% height=25% align="right">
+
