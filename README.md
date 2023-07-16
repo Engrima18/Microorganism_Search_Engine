@@ -11,7 +11,7 @@ images will be done using Weaviate.
 <br/>
 
 ## Weaviate and the pre-trained NN
-<img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/8f718d98-37a6-4a8a-95ae-6bbb3226f797" width=20% height=20% align="right">
+<img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/8f718d98-37a6-4a8a-95ae-6bbb3226f797" width=25% height=30% align="right">
 We will use a
 tool like Weaviate pre-trained neural network to extract features from the images
 and create a fast index of reference items.
