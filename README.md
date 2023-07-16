@@ -8,6 +8,7 @@ Final project for the "Cloud Computing" course at La Sapienza University of Rome
 The goal of this project is to develop an application that provides a search engine for images of bacteria. The search engine should be able to retrieve the most similar images to a given query image, uploaded by the user. The project will be deployed on Amazon Web Services and the ”algorithmic part” to compute similarity among
 images will be done using Weaviate.
 
+<br/>
 
 ## Weaviate and the pre-trained NN
 
