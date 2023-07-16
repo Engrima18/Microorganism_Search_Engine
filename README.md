@@ -11,7 +11,7 @@ images will be done using Weaviate.
 <br/>
 
 ## Weaviate and the pre-trained NN
-<img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/8f718d98-37a6-4a8a-95ae-6bbb3226f797" width=25% height=30% align="right">
+<img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/8f718d98-37a6-4a8a-95ae-6bbb3226f797" width=30% height=35% align="right">
 We will use a
 tool like Weaviate pre-trained neural network to extract features from the images
 and create a fast index of reference items.
@@ -34,4 +34,4 @@ task, however we identified three main components of our application:
 >- An API call for querying the database;
 >- The vector database itself.
 
-<img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/39c0c571-c750-4e3e-a93e-3172a2447215" width=20% height=20% align="right">
+<img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/39c0c571-c750-4e3e-a93e-3172a2447215" >
