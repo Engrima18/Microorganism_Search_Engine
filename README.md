@@ -11,7 +11,7 @@ images will be done using Weaviate.
 <br/>
 <br/>
 
-<img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/ee4720e3-8a38-4242-abb6-c797ed4ad519" width=30% height=50% align="center"><img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/bb7ebf6f-b196-443f-93fd-1a5a2da94fd2" width=30% height=30%  align="center"><img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/c653b5ae-c998-48be-9fca-f673a52abe22" width=30% height=30%  align="center">
+<img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/ee4720e3-8a38-4242-abb6-c797ed4ad519" width=30% height=70% align="center"><img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/bb7ebf6f-b196-443f-93fd-1a5a2da94fd2" width=30% height=30%  align="center"><img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/c653b5ae-c998-48be-9fca-f673a52abe22" width=30% height=30%  align="center">
 
 <br/>
 
