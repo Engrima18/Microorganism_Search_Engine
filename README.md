@@ -57,5 +57,5 @@ distributed among the instances (fairness performance).
 4. Monitor and adjust scaling: finally we can monitor the performance of our web
 app and adjust the scaling policies as needed.
 
-<img src="https://github.com/Engrima18/FlashLearnChain/assets/93355495/755cd041-6290-46b2-9413-80c6d2479c6b">
+<img src="https://github.com/Engrima18/FlashLearnChain/assets/93355495/755cd041-6290-46b2-9413-80c6d2479c6b" align="center">
 
