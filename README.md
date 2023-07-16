@@ -9,10 +9,9 @@ The goal of this project is to develop an application that provides a search eng
 images will be done using Weaviate.
 
 <br/>
-<br/>
 
 ## Weaviate and the pre-trained NN
-
+<img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/39c0c571-c750-4e3e-a93e-3172a2447215" width=20% height=20% align="right">
 We will use a
 tool like Weaviate pre-trained neural network to extract features from the images
 and create a fast index of reference items.
