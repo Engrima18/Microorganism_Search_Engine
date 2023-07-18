@@ -12,7 +12,7 @@ images will be done using Weaviate.
 
 Upload the image           |     Search the most similar bacterias     | Analyze the specs
 :-------------------------:|:-------------------------: |:-------------------------:
-<img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/c83ea911-0a5f-46f5-a69d-fbe81d056aac"> | <img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/cd7485c2-0d25-45c7-8369-e50695a1b5cd"> | <img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/f2367f00-a650-4aaa-9a9f-e65e76df494f">
+ <img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/f2367f00-a650-4aaa-9a9f-e65e76df494f"> | <img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/cd7485c2-0d25-45c7-8369-e50695a1b5cd"> | <img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/c83ea911-0a5f-46f5-a69d-fbe81d056aac">
 
 
 
