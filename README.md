@@ -17,7 +17,7 @@ Upload the image           |     Search the most similar bacterias     | Analyze
 
 
 ## Weaviate and the pre-trained NN
-<img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/8f718d98-37a6-4a8a-95ae-6bbb3226f797" width=35% height=40% align="right">
+<img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/a598a9d7-663e-4780-a097-eae0c638e081" width=35% height=40% align="right">
 We will use a
 tool like Weaviate pre-trained neural network to extract features from the images
 and create a fast index of reference items.
@@ -31,7 +31,7 @@ vector is then placed into an index, allowing the database to quickly perform se
 by finding the most similar vectors in the database to a given query vector.
 
 ## Microservices architecture
-<img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/39c0c571-c750-4e3e-a93e-3172a2447215" width=30% height=35% align="right">
+<img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/3f9b13c6-d5d0-43f7-ae30-79b664911891" width=30% height=35% align="right">
 
 In order to allow the scaling of our application we would like to implement it through
 a set of microservices such that the single functions can be scaled individually. But
