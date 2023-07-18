@@ -3,7 +3,7 @@
 Final project for the "Cloud Computing" course at La Sapienza University of Rome.
 
 ## Brief description
-<img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/a598a9d7-663e-4780-a097-eae0c638e081" width=20% height=20% align="left">
+<img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/f1c13eea-9130-4ad5-bee5-6579bc8ec452" width=20% height=20% align="left">
 
 The goal of this project is to develop an application that provides a search engine for images of bacteria. The search engine should be able to retrieve the most similar images to a given query image, uploaded by the user. The project will be deployed on Amazon Web Services and the ”algorithmic part” to compute similarity among
 images will be done using Weaviate.
@@ -12,7 +12,7 @@ images will be done using Weaviate.
 
 Upload the image           |     Search the most similar bacterias     | Analyze the specs
 :-------------------------:|:-------------------------: |:-------------------------:
-<img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/ee4720e3-8a38-4242-abb6-c797ed4ad519"> | <img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/bb7ebf6f-b196-443f-93fd-1a5a2da94fd2"> | <img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/c653b5ae-c998-48be-9fca-f673a52abe22">
+<img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/c83ea911-0a5f-46f5-a69d-fbe81d056aac"> | <img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/cd7485c2-0d25-45c7-8369-e50695a1b5cd"> | <img src="https://github.com/Engrima18/Microorganism_Search_Engine/assets/93355495/f2367f00-a650-4aaa-9a9f-e65e76df494f">
 
 
 
